@@ -16,7 +16,7 @@ def rec(v, samples, quant_levels, samplerate):
     if difference>=0:
         std_y = np.std(y)
         mean_y = np.mean(y)
-        a = std_y
+        a = std_y/2
         y = np.append(y, a*np.random.rand(difference,)+mean_y-a/2)
     else:
         y = y[0:int(len(y)+difference)]
