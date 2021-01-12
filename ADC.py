@@ -5,7 +5,7 @@ def hello():
     print('ADC is imported')
     return None
 
-def rec(samples, quant_levels, samplerate):
+def rec(v, samples, quant_levels, samplerate):
     path = '/content/ADC_emulator/data/data'+ str(v) +'_v2'
 
     y = pd.read_csv(path,  header=None).to_numpy().flatten()
