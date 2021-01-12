@@ -6,7 +6,7 @@ def hello():
     return None
 
 def rec(v, samples, quant_levels, samplerate):
-    path = '/content/ADC_emulator/data/data'+ str(v) +'_v2'
+    path = '/content/ADC_simulator/data/data'+ str(v) +'_v2'
 
     y = pd.read_csv(path,  header=None).to_numpy().flatten()
     Fs, y = int(y[0]), y[1:]
