@@ -29,6 +29,6 @@ def rec(v, samples, quant_levels, samplerate):
         converted_y[y > level] = level;
         i += 1
     
-    rate_step = int(Fs/samplerate);
+    rate_step = round(Fs/samplerate);
     converted_y = converted_y[0:np.size(y):rate_step]
     return converted_y
